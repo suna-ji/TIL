@@ -10,20 +10,20 @@
 빌드 artifact를 메이븐 저장소에 업로드하는 기능을 제공하는 플러그인   
 메이븐, 그레이들 둘다 해당 플러그인을 사용할 수 있다.   
 
-**사용법**
+**1. 사용법**
 ```shell
 plugins {
     id 'maven-publish'
 }
 ```
-**Tasks**
+**2. Tasks**
 - generatePomFileForPubNamePublication
 - publishPubNamePublicationToRepoNameRepository
 - publishPubNamePublicationToMavenLocal
 - publish
 - publishToMavenLocal
 
-**Publications**
+**3. Publications**   
 저장소에 올리려고 하는 파일에 대한 설명   
 publications는 이름을 가지며, 하나 또는 그 이상의 artifacts 정보로 구성된다.
 
@@ -31,7 +31,7 @@ publications는 이름을 가지며, 하나 또는 그 이상의 artifacts 정�
 
 링크 : https://docs.gradle.org/current/userguide/publishing_maven.html
 
-**Repositories**
+**4. Repositories**   
 해당 플러그인은 MavenArtifactRepository타입의 repositories를 제공한다.   
 
 ## 적용
