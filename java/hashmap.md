@@ -35,5 +35,26 @@ HashMap<String, String> map = new HashMap<>();
 map.keySet();
 // 모든 key를 모아서 Set의 자료형으로 리턴한다.
 ```
-
 출처: https://wikidocs.net/208
+
+#### 정렬
+1. TreeMap을 사용하여 정렬   
+TreeMap은 sortedMap 인터페이스를 상속받는 클래스이다.   
+comparator에서 문자열을 비교하는 경우 compareTo() 메서드가 실행된다.   
+이 메서드는 문자열을 사전순으로 비교하고 오름차순으로 정렬한다.   
+```java
+Map<String, String> sortedMap = new TreeMap<>(map);
+```
+2. 직접 정의   
+직접정의한 comparator를 사용하여 정렬할 수 있다.
+```java
+Map<String, String> sortedMap = new TreeMap<>(new Comparator<String>() {
+    @Override
+    public int compare(String o1, String o2) {
+       
+    }
+})
+sortedMap.putAll(map);
+```   
+
+출처: https://developer-talk.tistory.com/395
