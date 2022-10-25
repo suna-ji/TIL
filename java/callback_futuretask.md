@@ -75,13 +75,13 @@ https://devsophia.tistory.com/entry/JAVA-%EC%BD%9C%EB%B0%B1-%EB%A9%94%EC%84%9C%E
 
 ## 2. CountdownLatch
 ### 상황
-command모듈에서 scanId를 얻는 시점에 리졸버에서도 scanId를 받을수 있게 되었는데, 문제는 scanId를 받기전에 리졸버거 리턴한다는것이였다.
+command모듈에서 scanId를 얻는 시점에 리졸버에서도 scanId를 받을수 있게 되었는데, 문제는 scanId를 받기전에 리졸버거 리턴한다는것이였다.   
 이 문제를 해결하기 위해서 생각한 방법은 3가지 정도가 있었다.
-1. while문
+1. while문   
    가장 쉽게 해결되겠지만 이건 좋은 방법이 아니라고 생각했다.
-2. Future
+2. Future   
    3번에서 작성하겠지만 시도해봤지만 실패했다.
-3. CountdownLatch
+3. CountdownLatch   
 ### 설명
 CountdownLatch클래스는 다른 클래스가 작업을 완료할때까지 스레드를 block하기 위해 사용되는 클래스이다.  
 CountdownLatch는 카운터 필드를 가지고 있고, 원하는 만큼 감소시킬 수 있다. 
