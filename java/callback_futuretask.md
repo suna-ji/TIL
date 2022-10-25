@@ -116,8 +116,27 @@ https://www.baeldung.com/java-countdown-latch
 ### 설명
 - 비동기적 연산 또는 작업을 수행한 후 도출된 결과를 나타내는 것
 - 다른 스레드에서 리턴한값을 메인 스레드에서 받고싶을 때 사용
-
+- java 1.5
+### 예제
+```java
+ExecutorService executorService = Executors.newCachedThreadPool(); 
+Future<String> future = executorService.submit(() -> {
+   new Callable<String>() {
+       public String call() {
+           return "ddd";
+        }
+  }
+});
+future.get(); // return 될때까지 기다림
+```
+### 적용하지 못한 이유
+Callable에 넣을 내용은 scanId를 받아오는 부분이였는데,    
+리졸버에서는 콜백 인터페이스를 구현해서 Callee에 객체 등록하는 코드를 통해 scanId를 받아오기 때문에 Callable에 등록할 수 있는 내용이 아니였다.   
+### Callable vs Runnable
+Thread는 Runnable과 Callable의 구현된 함수를 수행한다는 공통점이 있다.   
+Callable은 Runnable의 개선된 버전으로, 반환값과 Exception을 추가할 수 있다.
 
 ### 출처 
+https://www.baeldung.com/java-future
 https://stackoverflow.com/questions/55126968/wait-for-the-async-callback-function-to-return-in-java
 https://stackoverflow.com/questions/4956822/whats-the-difference-between-future-and-futuretask-in-java
