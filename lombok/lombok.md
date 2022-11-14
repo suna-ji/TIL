@@ -20,7 +20,7 @@ Entity 클래스는 전체 필드를 대상으로 하는 생성자가 필요해�
 그럼 Entity 아니고 단순한 dto클래스의 경우 직접 정의한 다른 생성자도 없는데, 접근제어 목적도 없이 @NoArgsContructor 어노테이션 딱 하나만 쓰는건 잘못된거라고 할 수 있는건가..?
 
 
-출처
+출처   
 https://velog.io/@mincho920/Spring-NoArgsConstructor
 https://yeon-kr.tistory.com/176
 https://stackoverflow.com/questions/27654167/difference-between-a-no-arg-constructor-and-a-default-constructor-in-java
