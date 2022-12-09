@@ -58,8 +58,8 @@ List와 Set인터페이스의 많은 공통된 부분을 Collection 인터페이
 |int size()|해당 컬렉션의 요소의 총 개수를 반환|
 |Object[] toArray()|해당 컬렉션의 모든 요소를 Object타입의 배열로 반환|
 
-[링크](https://www.geeksforgeeks.org/how-to-learn-java-collections-a-complete-guide/)
-[링크](http://www.tcpschool.com/java/java_collectionFramework_concept)
+[출처 1](https://www.geeksforgeeks.org/how-to-learn-java-collections-a-complete-guide/)    
+[출처 2](http://www.tcpschool.com/java/java_collectionFramework_concept)
 
 
 
